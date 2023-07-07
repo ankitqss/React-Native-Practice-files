@@ -1,12 +1,15 @@
 import React from "react";
 import { Button, StyleSheet, Text, View } from "react-native";
 
-const ColorComponent = ({ color }) => {
+const ColorComponent = ({ color, onIncrease, onDecrease, colorCount }) => {
   return (
     <View>
-      <Text>{color}</Text>
-      <Button title={`Increase ${color}`} />
-      <Button title={`Decrease ${color}`} />
+      <Text>
+        {color}
+        {`   ${colorCount}`}
+      </Text>
+      <Button title={`Increase ${color}`} onPress={() => onIncrease()} />
+      <Button title={`Decrease ${color}`} onPress={() => onDecrease()} />
     </View>
   );
 };
