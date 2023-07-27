@@ -42,13 +42,13 @@ const styles = StyleSheet.create({
     display: "flex",
     justifyContent: "center",
     fontWeight: "bold",
-    fontSize: "3rem",
+    fontSize: 30,
   },
   valueText:{
     display: "flex",
     justifyContent: "center",
     color: "green",
-    fontSize: "2rem",
+    fontSize: 20,
     fontWeight: "bolder"
   }
 });

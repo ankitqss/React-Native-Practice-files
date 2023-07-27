@@ -9,8 +9,8 @@ const ColorMixture = () => {
     <View>
       <Text>Color Mixture</Text>
 
-      <Text>
-        <h1 style={{ color: "red" }}>RED</h1>
+      <Text style={{color: "red", fontSize: 20}}>
+        RED
       </Text>
       <Button title="Increase Red" onPress={() => setRed(red + 10)} />
       <Button
@@ -19,8 +19,8 @@ const ColorMixture = () => {
           setRed(red - 10);
         }}
       />
-      <Text>
-        <h1 style={{ color: "green" }}>GREEN</h1>
+      <Text style={{color: "green", fontSize: 20}}>
+        GREEN
       </Text>
       <Button title="Increase Green" onPress={() => setGreen(green + 10)} />
       <Button
@@ -29,8 +29,8 @@ const ColorMixture = () => {
           setRed(green - 10);
         }}
       />
-      <Text>
-        <h1 style={{ color: "blue" }}>BLUE</h1>
+      <Text style={{color: "blue", fontSize: 20}}>
+       BLUE
       </Text>
       <Button title="Increase Blue" onPress={() => setBlue(blue + 10)} />
       <Button
