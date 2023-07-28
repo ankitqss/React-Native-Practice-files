@@ -5,7 +5,7 @@ import yelp from "../components/yelp";
 import ResultsList from "../components/ResultsList";
 import { ScrollView } from "react-native";
 
-const SearchScreen = () => {
+const SearchScreen = ({ navigation }) => {
   const [term, setTerm] = useState("");
   const [results, setResults] = useState([]);
   const [errorMsg, setErrorMsg] = useState();
@@ -48,20 +48,22 @@ const SearchScreen = () => {
           onTermChange={setTerm}
           onTextSubmit={() => searchApi(term)}
         />
-        <Text>We have found {results.length} results</Text>
         {errorMsg ? <Text>{errorMsg}</Text> : ""}
 
         <ResultsList
+          navigation={navigation}
           loading={loading}
           results={filterResultsByPrice("$")}
           title="Cost Effective"
         />
         <ResultsList
+          navigation={navigation}
           loading={loading}
           results={filterResultsByPrice("$$")}
           title="Bit Pricier"
         />
         <ResultsList
+          navigation={navigation}
           loading={loading}
           results={filterResultsByPrice("$$$")}
           title="Big Spender"
